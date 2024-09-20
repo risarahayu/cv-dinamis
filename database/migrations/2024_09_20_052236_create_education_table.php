@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->id();
+            $table->year('tahun'); // Kolom untuk tahun
+            $table->string('sekolah'); // Kolom untuk nama sekolah
+            $table->string('jurusan'); // Kolom untuk jurusan
+            $table->decimal('ipk', 3, 2); // Kolom untuk IPK (misal 4.00)
             $table->timestamps();
         });
     }
