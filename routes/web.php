@@ -26,3 +26,6 @@ Route::resource('/biodata', App\Http\Controllers\BiodataController::class);
 // menambahkan route education
 Route::resource('/education', App\Http\Controllers\EducationController::class);
 
+//menambahkan route untuk show cv
+Route::get('/CV', [App\Http\Controllers\CVController::class, 'show'])->name('cv.show');
+
