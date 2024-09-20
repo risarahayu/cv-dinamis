@@ -35,12 +35,12 @@ class EducationController extends Controller
             'tahun' => 'required|integer|digits:4', // Tahun harus berupa angka 4 digit
             'sekolah' => 'required|string|max:255', // Sekolah harus diisi dan maksimal 255 karakter
             'jurusan' => 'required|string|max:255', // Jurusan harus diisi dan maksimal 255 karakter
-            'ipk' => 'required|numeric|between:0,4.00', // IPK harus diisi, berupa angka antara 0.00 - 4.00
+            'ipk' => 'required|numeric', // IPK harus diisi, berupa angka antara 0.00 - 4.00
         ]);
 
         // Simpan data ke database
         Education::create($Validasi);
-        return view('show');
+        return redirect()->route('cv.show');
     }
 
     /**
