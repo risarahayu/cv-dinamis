@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- ini adalah formulir biodata -->
     <div class="container">
         <h1>Formulir Biodata</h1>
         <form method="POST" action="{{ route('biodata.store') }}">
