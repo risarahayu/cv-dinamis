@@ -18,12 +18,12 @@
             </div>
             <div class="mb-3">
                 <label for="jurusan" class="form-label">jurusan</label>
-                <textarea type="jurusan" class="form-control" id="" aria-describedby="" placeholder="Tambahkan jurusan" name="sekolah" required></textarea>
+                <textarea type="jurusan" class="form-control" id="" aria-describedby="" placeholder="Tambahkan jurusan" name="jurusan" required></textarea>
                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
             <div class="mb-3">
                 <label for="ipk" class="form-label">ipk</label>
-                <textarea type="ipk" class="form-control" id="" aria-describedby="" placeholder="Tambahkan ipk" name="sekolah" required></textarea>
+                <textarea type="ipk" class="form-control" id="" aria-describedby="" placeholder="Tambahkan ipk" name="ipk" required></textarea>
                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
