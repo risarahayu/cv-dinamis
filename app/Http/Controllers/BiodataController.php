@@ -38,10 +38,23 @@ class BiodataController extends Controller
         $Validasi = $request->validate([
             'nama' => 'required|string|max:255',
             'keterangan' => 'required|string',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
+        // Cek apakah ada file yang diupload
+        if ($request->hasFile('image')) {
+            // Ambil file
+            $image = $request->file('image');
+            // Tentukan nama file unik
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            // Simpan gambar ke folder public/images
+            $image->move(public_path('images'), $imageName);
+            // Masukkan nama file ke dalam validasi
+            $Validasi['image'] = $imageName;
+        }
         // Simpan data ke database
         Biodata::create($Validasi);
+
         return redirect()->route('cv.show');
     }
 

@@ -5,7 +5,8 @@
         <div class="row">
             @foreach($data as $data)
                 <div class="col-4">
-
+                    <!-- Menampilkan gambar yang diupload -->
+                    <img src="{{ asset('images/' . $data->image) }}" alt="Foto {{ $data->nama }}" style="width: 100%; height: auto;">
                 </div>
                 <div class="col-8">
                     <div class="row">
@@ -19,12 +20,13 @@
         </div>
         <div class="row">
             <h3>Education</h3>
-            <span class="m-3 p-3 rounded border">
+            <span class="m-3 p-3 roundedborder">
                 @foreach($education as $education)
                     {{$education->sekolah}}
                     {{$education->jurusan}}
                     {{$education->tahun}}
                     {{$education->ipk}}
+                    
                 @endforeach
             </span>
         </div>

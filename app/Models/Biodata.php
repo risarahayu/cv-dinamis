@@ -11,5 +11,6 @@ class Biodata extends Model
     protected $fillable = [
         'nama',
         'keterangan',
+        'image',
     ];
 }
