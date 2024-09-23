@@ -71,7 +71,7 @@ class BiodataController extends Controller
      */
     public function edit(Biodata $biodata)
     {
-        //
+        return view ('Biodata.edit');
     }
 
     /**
