@@ -69,9 +69,10 @@ class BiodataController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Biodata $biodata)
+    public function edit($id)
     {
-        return view ('Biodata.edit');
+        $biodata = Biodata::findOrFail($id);
+        return view ('Biodata.edit', compact('biodata'));
     }
 
     /**
