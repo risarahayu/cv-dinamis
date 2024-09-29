@@ -4,6 +4,11 @@
     <div class="container">
         <div class="row">
             @foreach($data as $data)
+                <form action="{{ route('biodata.destroy', $data->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus biodata ini?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Hapus</button>
+                </form>
                 <div class="col-4">
                     <!-- Menampilkan gambar yang diupload -->
                     <img src="{{ asset('images/' . $data->image) }}" alt="Foto {{ $data->nama }}" style="width: 100%; height: auto;">
@@ -26,7 +31,6 @@
                     {{$education->jurusan}}
                     {{$education->tahun}}
                     {{$education->ipk}}
-                    
                 @endforeach
             </span>
         </div>
